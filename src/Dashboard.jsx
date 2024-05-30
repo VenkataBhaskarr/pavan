@@ -16,7 +16,7 @@ const Dashboard = () => {
                 return;
             }
             try {
-                const response = await axios.get('http://localhost:3000/api/auth/user', {
+                const response = await axios.get('https://miniature-journey.onrender.com/api/auth/user', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -26,7 +26,7 @@ const Dashboard = () => {
                     if (response.data.role === 'user') {
                         setUser(response.data.user);
                     } else if (response.data.role === 'admin') {
-                        const usersResponse = await axios.get('http://localhost:3000/api/auth/users', {
+                        const usersResponse = await axios.get('https://miniature-journey.onrender.com/api/auth/users', {
                             headers: {
                                 Authorization: `Bearer ${token}`,
                             },

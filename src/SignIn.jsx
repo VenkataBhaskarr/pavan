@@ -13,7 +13,7 @@ const SignIn = () => {
     const handleSignIn = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/api/auth/signin', {
+            const response = await axios.post('https://miniature-journey.onrender.com/api/auth/signin', {
                 name, email, password
             });
 
